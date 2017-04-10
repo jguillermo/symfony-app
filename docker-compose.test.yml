@@ -1,0 +1,34 @@
+version: '2'
+services:
+
+  php:
+      image: jguillermo/demo-app:php
+      volumes:
+        - ./app/:/var/www/html
+      ports:
+        - 8085:80
+      depends_on:
+         - mysql
+  mysql:
+    image: jguillermo/demo-app:mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toord
+      MYSQL_USER : root
+      MYSQL_DATABASE: dbproject
+    ports:
+      - 3369:3306
+    volumes:
+      - ./docker/mysql/sql:/docker-entrypoint-initdb.d
+
+  cli:
+    image: jguillermo/demo-app:cli
+    environment:
+       - DEV_UID=${DEV_UID}
+       - DEV_GID=${DEV_GID}
+    volumes:
+       - ./app/:/var/www/html
+       - ./docker/ssh/:/app/.ssh/
+    depends_on:
+       - php
+       - mysql
+    command: ["/tmp/wait-for-it.sh", "mysql:3305", "--", "composer test-integration"]

@@ -1,0 +1,43 @@
+version: '2'
+services:
+
+  php:
+      image: jguillermo/demo-app:php
+      volumes:
+        - ./app/:/var/www/html
+      ports:
+        - 8085:80
+
+  mysql:
+    image: jguillermo/demo-app:mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toord
+      MYSQL_USER : root
+      MYSQL_DATABASE: dbproject
+    ports:
+      - 3369:3306
+    volumes:
+      - ./docker/mysql/sql:/docker-entrypoint-initdb.d
+
+  solr:
+    image: jguillermo/demo-app:solr
+    ports:
+      - 8983:8983
+    volumes:
+      - ./solr:/opt/solr/server/solr/mycores
+#    entrypoint:
+#      - docker-entrypoint.sh
+#      - solr-precreate
+#      - employee
+
+#    # sudo chmod o+w -R solr
+
+#  mongo:
+#    image: jguillermo/mongo:3.4
+#    ports:
+#      - 27018:27017
+##    environment:
+##      - MONGO_INITDB_ROOT_USERNAME=admin
+##      - MONGO_INITDB_ROOT_PASSWORD=admin123456
+#    volumes:
+#      - ./build/mongo/data:/docker-entrypoint-initdb.d

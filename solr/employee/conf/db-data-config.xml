@@ -1,0 +1,15 @@
+<dataConfig>
+    <dataSource
+            type="JdbcDataSource"
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://mysql:3306/dbproject?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
+            user="root"
+            password="toord"
+    />
+    <document>
+        <entity name="user" query="SELECT user_id, role FROM employee" >
+            <field column="user_id" name="userId" />
+            <field column="role" name="role" />
+        </entity>
+    </document>
+</dataConfig>

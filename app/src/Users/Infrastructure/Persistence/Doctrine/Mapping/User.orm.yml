@@ -1,0 +1,21 @@
+Misa\Users\Domain\User:
+    type: entity
+    table: user
+    id:
+        id:
+            type: string
+            length: '36'
+            id: true
+            generator:
+                strategy: NONE
+    fields:
+        name:
+            type: string
+            length: '50'
+        lastName:
+            type: string
+            length: '50'
+        secondLastName:
+            type: string
+            length: '50'
+    lifecycleCallbacks: {  }

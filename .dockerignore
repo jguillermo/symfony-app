@@ -1,0 +1,14 @@
+docker-compose.build.yml
+docker-compose.override.yml
+docker-compose.tasks.yml
+docker-compose.test.yml
+docker-compose.migration.yml
+docker-compose.yml
+scripts
+.ssh
+.composer
+README.md
+var/*
+docker/*
+/node_modules/
+!/node_modules/*%

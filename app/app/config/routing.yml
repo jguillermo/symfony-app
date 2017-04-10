@@ -1,0 +1,4 @@
+users:
+    type:     rest
+    prefix:   "v1/users"
+    resource: "@UsersBundle/Resources/config/routing.yml"

@@ -1,0 +1,54 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Misa\Users\Infrastructure\Ui\UsersBundle\Controller\:
+        resource: '../../Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
+
+    ###    services
+
+    #user
+    Misa\Users\Application\Services\User\ListService: ~
+    Misa\Users\Application\Services\User\MngService: ~
+
+    Misa\Users\Application\Services\Employee\ListService: ~
+    Misa\Users\Application\Services\Employee\MngService: ~
+
+
+    ###   repository
+    Misa\Users\Domain\UserRepository: '@users.users.rep'
+    Misa\Users\Domain\Employee\EmployeeRepository: '@users.employee.rep'
+
+    users.users.rep:
+        class: Misa\Users\Infrastructure\Persistence\Doctrine\UserDbRepository
+        arguments: {$entityName: 'Misa\Users\Domain\User'}
+        autowire: true
+
+    users.employee.rep:
+        class: Misa\Users\Infrastructure\Persistence\Doctrine\EmployeeDbRepository
+        arguments: {$entityName: 'Misa\Users\Domain\Employee\Employee'}
+        autowire: true
+
+    ### presentation
+    Misa\Users\Presentation\UserPresentation: ~
+    Misa\Users\Presentation\EmployeePresentation: ~
+
+
+#    users.user.solr.rep:
+#        class: Misa\Users\Infrastructure\SearchEngine\Solr\UserSolrRepository
+#        arguments: ["@solarium.client.user"]
+#
+#    users.employee.solr.rep:
+#        class: Misa\Users\Infrastructure\SearchEngine\Solr\EmployeeSolrRepository
+#        arguments: ["@solarium.client.employee"]
+
+
+
+
+
+

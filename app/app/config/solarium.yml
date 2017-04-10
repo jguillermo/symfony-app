@@ -1,0 +1,21 @@
+nelmio_solarium:
+    endpoints:
+        user:
+            scheme: http
+            host: '%solr.client.host%'
+            port: '%solr.client.port%'
+            path: '%solr.client.path%'
+            timeout: '%solr.client.timeout%'
+            core: user
+        employee:
+            scheme: http
+            host: '%solr.client.host%'
+            port: '%solr.client.port%'
+            path: '%solr.client.path%'
+            timeout: '%solr.client.timeout%'
+            core: employee
+    clients:
+        user:
+            endpoints: [user]
+        employee:
+            endpoints: [employee]

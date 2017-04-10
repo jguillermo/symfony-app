@@ -1,0 +1,20 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: mysql
+    database_port: 3306
+    database_name: dbproject
+    database_user: root
+    database_password: toord
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+    app_secret: ThisTokenIsNotSoSecretChangeIt
+    version_api: v1/
+    regexr_id_entity: '[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}'
+    ws_services: 'http://localhost:8983/solr/'
+    solr.client.port: 8983
+    solr.client.host: solr
+    solr.client.path: /solr
+    solr.client.timeout: 10

@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+  php:
+    image: jguillermo/demo-app:php
+    build:
+      context: ./docker/php-apache/
+
+  cli:
+      image: jguillermo/demo-app:cli
+      build:
+        context: ./docker/php-cli/
+
+  mysql:
+      image: jguillermo/demo-app:mysql
+      build:
+        context: ./docker/mysql/
+
+  solr:
+      image: jguillermo/demo-app:solr
+      build:
+        context: ./docker/solr/
+
+
+#  mongo:
+#      image: jguillermo/demo-app:mongo
+#      build:
+#        context: ./docker/mongo

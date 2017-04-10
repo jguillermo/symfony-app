@@ -1,0 +1,27 @@
+Misa\Users\Domain\Employee\Employee:
+    type: entity
+    table: employee
+    indexes:
+        misa_employee_idx_user_name:
+            columns: [ user_name ]
+    id:
+        user:
+            associationKey: true
+    fields:
+        role:
+            type: smallint
+        userName:
+            type: string
+            length: '100'
+            unique: true
+        userPassword:
+            type: string
+            length: '100'
+    oneToOne:
+        user:
+            targetEntity: Misa\Users\Domain\User
+            fetch: LAZY
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+    lifecycleCallbacks: {  }

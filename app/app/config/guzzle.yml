@@ -1,0 +1,12 @@
+guzzle:
+    logging: '%kernel.debug%'
+
+    clients:
+        solr.client:
+            base_url : '%ws_services%'
+            options:
+              http_errors: false
+
+services:
+
+    GuzzleHttp\Client: '@guzzle.client.solr.client'

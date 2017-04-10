@@ -1,0 +1,17 @@
+<dataConfig>
+    <dataSource
+            type="JdbcDataSource"
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://mysql:3306/dbproject?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
+            user="root"
+            password="toord"
+    />
+    <document>
+        <entity name="user" query="SELECT id, name, last_name, second_last_name FROM user" >
+            <field column="id" name="id" />
+            <field column="name" name="name" />
+            <field column="last_name" name="lastName" />
+            <field column="second_last_name" name="secondLastName" />
+        </entity>
+    </document>
+</dataConfig>
