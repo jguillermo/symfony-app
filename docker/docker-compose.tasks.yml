@@ -1,0 +1,11 @@
+version: '2'
+services:
+  cli:
+    image: jguillermo/php-cli:7.1
+    environment:
+        - DEV_UID=${DEV_UID}
+        - DEV_GID=${DEV_GID}
+    volumes:
+        - ./../:/var/www/html
+        - ./docker/ssh/:/app/.ssh/
+    command: composer update

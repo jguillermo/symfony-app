@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+  php:
+    image: jguillermo/php-apache-web:7.1
+    build:
+      context: ./build/php-apache/
+
+  cli:
+      image: jguillermo/php-cli:7.1
+      build:
+        context: ./build/php-cli/
+
+  postgres:
+    image: jguillermo/postgres:9.6
+    build:
+      context: ./build/postgres/
+
+  mysql:
+      image: jguillermo/mysql:5.6
+      build:
+        context: ./build/mysql/

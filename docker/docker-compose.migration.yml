@@ -1,0 +1,15 @@
+version: '2'
+services:
+
+  cli:
+    extends:
+      file: docker-compose.tasks.yml
+      service: cli
+    depends_on:
+      - mysql
+    command: ["/tmp/wait-for-it.sh", "mysql:3359", "--", "./scripts/migration.sh ${MIGRATION_COMMAND}"]
+
+  mysql:
+    extends:
+      file: docker-compose.yml
+      service: mysql
