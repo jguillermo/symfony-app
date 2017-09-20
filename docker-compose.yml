@@ -25,8 +25,10 @@ services:
       - 8983:8983
     volumes:
       - ./solr:/opt/solr/server/solr/mycores
+      - ./app/export:/opt/solr/mydata
 #    entrypoint:
 #      - docker-entrypoint.sh
+#      - run-initdb
 #      - solr-precreate
 #      - employee
 

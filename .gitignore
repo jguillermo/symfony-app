@@ -35,4 +35,4 @@ app/web/build/manifest.json
 
 solr/user/data
 solr/employee/data
-solr/ex/
+solr-example

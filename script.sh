@@ -76,9 +76,18 @@ app_composer_cmd()
 
 app_builddb_cmd()
 {
+    sudo rm -rf ./app/export/data
+    mkdir ./app/export/data
+    chmod 777 ./app/export/data
     docker-compose exec --user $(id -u):$(id -g) php php bin/console doctrine:migrations:migrate --no-interaction
     docker-compose exec --user $(id -u):$(id -g) php php bin/console doctrine:fixtures:load --no-interaction
     docker-compose exec --user $(id -u):$(id -g) mysql ./dump.sh
+    docker-compose exec --user $(id -u):$(id -g) php bin/console app:user:export
+    docker-compose exec solr ./export.sh
+    sudo chmod 777 -R ./app/export/data
+    sudo rm -rf ./docker/solr/data/
+    mv ./app/export/data/solr-data ./docker/solr/data/
+    docker-compose -f docker-compose.build.yml build solr
 }
 
 app_test_cmd()

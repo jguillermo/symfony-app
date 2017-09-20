@@ -455,12 +455,89 @@
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <field name="_version_" type="long" indexed="false" stored="false"/>
+  <field name="aapl_keywords" type="strings"/>
+  <field name="access_permission_assemble_document" type="booleans"/>
+  <field name="access_permission_can_modify" type="booleans"/>
+  <field name="access_permission_can_print" type="booleans"/>
+  <field name="access_permission_can_print_degraded" type="booleans"/>
+  <field name="access_permission_extract_content" type="booleans"/>
+  <field name="access_permission_extract_for_accessibility" type="booleans"/>
+  <field name="access_permission_fill_in_form" type="booleans"/>
+  <field name="access_permission_modify_annotations" type="booleans"/>
   <field name="aptitudes_int" type="ints"/>
   <field name="aptitudes_str" type="strings"/>
+  <field name="author" type="strings"/>
+  <field name="cat" type="strings"/>
+  <field name="content_encoding" type="strings"/>
+  <field name="content_type" type="strings"/>
+  <field name="cp_subject" type="strings"/>
+  <field name="created" type="strings"/>
+  <field name="creation_date" type="tdates"/>
+  <field name="creator" type="strings"/>
+  <field name="date" type="tdates"/>
+  <field name="dc_creator" type="strings"/>
+  <field name="dc_format" type="strings"/>
+  <field name="dc_subject" type="strings"/>
+  <field name="dc_title" type="strings"/>
+  <field name="dcterms_created" type="tdates"/>
+  <field name="dcterms_modified" type="tdates"/>
+  <field name="directed_by" type="strings"/>
+  <field name="features" type="strings"/>
+  <field name="genre" type="strings"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="inStock" type="booleans"/>
+  <field name="includes" type="strings"/>
+  <field name="initArgs.format" type="strings"/>
+  <field name="initArgs.ignoreCase" type="booleans"/>
+  <field name="initial_release_date" type="tdates"/>
+  <field name="keywords" type="strings"/>
   <field name="lastName" type="app_text_es" indexed="true" stored="true"/>
+  <field name="last_modified" type="tdates"/>
+  <field name="last_save_date" type="tdates"/>
+  <field name="managedList" type="strings"/>
+  <field name="managedMap.GB" type="strings"/>
+  <field name="managedMap.TV" type="strings"/>
+  <field name="managedMap.happy" type="strings"/>
+  <field name="manu" type="strings"/>
+  <field name="meta_author" type="strings"/>
+  <field name="meta_creation_date" type="tdates"/>
+  <field name="meta_keyword" type="strings"/>
+  <field name="meta_save_date" type="tdates"/>
+  <field name="modified" type="tdates"/>
   <field name="name" type="app_text_es" indexed="true" stored="true"/>
+  <field name="params._UPDATE_JSON_DOCS..v" type="tlongs"/>
+  <field name="params._UPDATE_JSON_DOCS.mapUniqueKeyOnly" type="booleans"/>
+  <field name="params._UPDATE_JSON_DOCS.srcField" type="strings"/>
+  <field name="params.facets..v" type="tlongs"/>
+  <field name="params.facets.facet" type="strings"/>
+  <field name="params.facets.facet.mincount" type="tlongs"/>
+  <field name="params.query..v" type="tlongs"/>
+  <field name="params.query.defType" type="strings"/>
+  <field name="params.query.fl" type="strings"/>
+  <field name="params.query.q.alt" type="strings"/>
+  <field name="params.query.rows" type="tlongs"/>
+  <field name="params.velocity..v" type="tlongs"/>
+  <field name="params.velocity.v.layout" type="strings"/>
+  <field name="params.velocity.v.template" type="strings"/>
+  <field name="params.velocity.wt" type="strings"/>
+  <field name="payloads" type="strings"/>
+  <field name="pdf_encrypted" type="booleans"/>
+  <field name="pdf_pdfversion" type="tdoubles"/>
+  <field name="popularity" type="tlongs"/>
+  <field name="price" type="tdoubles"/>
+  <field name="producer" type="strings"/>
+  <field name="resourcename" type="strings"/>
   <field name="secondLastName" type="app_text_es" indexed="true" stored="true"/>
+  <field name="store" type="strings"/>
+  <field name="stream_content_type" type="strings"/>
+  <field name="stream_size" type="tlongs"/>
+  <field name="subject" type="strings"/>
+  <field name="title" type="strings"/>
+  <field name="weight" type="tdoubles"/>
+  <field name="x_parsed_by" type="strings"/>
+  <field name="x_ua_compatible" type="strings"/>
+  <field name="xmp_creatortool" type="strings"/>
+  <field name="xmptpg_npages" type="tlongs"/>
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
   <dynamicField name="*_ancestor_path" type="ancestor_path" indexed="true" stored="true"/>
