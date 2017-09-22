@@ -484,14 +484,12 @@
   <field name="directed_by" type="strings"/>
   <field name="features" type="strings"/>
   <field name="genre" type="strings"/>
-  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="inStock" type="booleans"/>
   <field name="includes" type="strings"/>
   <field name="initArgs.format" type="strings"/>
   <field name="initArgs.ignoreCase" type="booleans"/>
   <field name="initial_release_date" type="tdates"/>
   <field name="keywords" type="strings"/>
-  <field name="lastName" type="app_text_es" indexed="true" stored="true"/>
   <field name="last_modified" type="tdates"/>
   <field name="last_save_date" type="tdates"/>
   <field name="managedList" type="strings"/>
@@ -504,7 +502,6 @@
   <field name="meta_keyword" type="strings"/>
   <field name="meta_save_date" type="tdates"/>
   <field name="modified" type="tdates"/>
-  <field name="name" type="app_text_es" indexed="true" stored="true"/>
   <field name="params._UPDATE_JSON_DOCS..v" type="tlongs"/>
   <field name="params._UPDATE_JSON_DOCS.mapUniqueKeyOnly" type="booleans"/>
   <field name="params._UPDATE_JSON_DOCS.srcField" type="strings"/>
@@ -527,7 +524,10 @@
   <field name="price" type="tdoubles"/>
   <field name="producer" type="strings"/>
   <field name="resourcename" type="strings"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="secondLastName" type="app_text_es" indexed="true" stored="true"/>
+  <field name="name" type="app_text_es" indexed="true" stored="true"/>
+  <field name="lastName" type="app_text_es" indexed="true" stored="true"/>
   <field name="store" type="strings"/>
   <field name="stream_content_type" type="strings"/>
   <field name="stream_size" type="tlongs"/>

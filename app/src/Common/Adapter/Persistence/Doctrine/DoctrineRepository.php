@@ -2,7 +2,7 @@
 
 namespace Misa\Common\Adapter\Persistence\Doctrine;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Misa\Common\Exception\Repository\NotFoundException;
 
 /**
@@ -18,7 +18,7 @@ class DoctrineRepository implements MisaRepository
     protected $entityName;
     protected $repository;
 
-    public function __construct(EntityManager $em, $entityName)
+    public function __construct(EntityManagerInterface $em, $entityName)
     {
         $this->em = $em;
         $this->entityName = $entityName;

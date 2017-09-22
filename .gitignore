@@ -36,3 +36,9 @@ app/web/build/manifest.json
 solr/user/data
 solr/employee/data
 solr-example
+
+docker/solr/data/*
+!docker/solr/data/.gitkeep
+
+app/export/*
+!app/export/.gitkeep
