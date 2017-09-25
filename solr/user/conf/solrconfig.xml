@@ -759,8 +759,11 @@
       -->
     <lst name="defaults">
       <str name="echoParams">explicit</str>
+      <str name="defType">edismax</str>
       <int name="rows">10</int>
-      <!-- <str name="df">text</str> -->
+      <str name="df">search_name</str>
+      <str name="qf">name^100 lastName^50 secondLastName^10</str>
+
     </lst>
     <!-- In addition to defaults, "appends" params can be specified
          to identify values which should be appended to the list of

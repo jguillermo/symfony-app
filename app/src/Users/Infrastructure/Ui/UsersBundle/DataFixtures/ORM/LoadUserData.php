@@ -39,6 +39,19 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($userAdmin);
 
         /**
+         * se crean 3 user, que tengan el mismo nombre app apm para busquedas en solr
+         */
+        $user = User::create($faker->firstName, $faker->lastName, 'Melissa');
+        $manager->persist($user);
+
+        $user = User::create('Melissa', $faker->lastName, $faker->lastName);
+        $manager->persist($user);
+
+        $user = User::create($faker->firstName, 'Melissa', $faker->lastName);
+        $manager->persist($user);
+
+
+        /**
          * se genera una lista de personas
          */
         for ($i = 0; $i < 20; $i++) {
