@@ -18,7 +18,7 @@ use Misa\Users\Presentation\EmployeePresentation;
  */
 class ListService
 {
-    /** @var  EmployeeRepository */
+    /** @var EmployeeRepository */
     private $employeeRepository;
 
     /** @var  EmployeePresentation */

@@ -39,14 +39,6 @@ services:
     Misa\Users\Presentation\EmployeePresentation: ~
 
 
-#    users.user.solr.rep:
-#        class: Misa\Users\Infrastructure\SearchEngine\Solr\UserSolrRepository
-#        arguments: ["@solarium.client.user"]
-#
-#    users.employee.solr.rep:
-#        class: Misa\Users\Infrastructure\SearchEngine\Solr\EmployeeSolrRepository
-#        arguments: ["@solarium.client.employee"]
-
 
 
 

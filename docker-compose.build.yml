@@ -20,9 +20,3 @@ services:
       image: jguillermo/demo-app:solr
       build:
         context: ./docker/solr/
-
-
-#  mongo:
-#      image: jguillermo/demo-app:mongo
-#      build:
-#        context: ./docker/mongo
