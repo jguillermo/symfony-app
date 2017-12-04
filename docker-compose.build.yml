@@ -15,8 +15,3 @@ services:
       image: jguillermo/demo-app:mysql
       build:
         context: ./docker/mysql/
-
-  solr:
-      image: jguillermo/demo-app:solr
-      build:
-        context: ./docker/solr/
