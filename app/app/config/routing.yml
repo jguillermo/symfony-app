@@ -1,4 +1,3 @@
-users:
-    type:     rest
-    prefix:   "v1/users"
-    resource: "@UsersBundle/Resources/config/routing.yml"
+user:
+    type:     annotation
+    resource: "@UsersBundle/Controller/GraphController.php"
