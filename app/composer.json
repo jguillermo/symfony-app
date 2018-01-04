@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Misa\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "MisaTests\\": "tests/"
         }
     },
     "replace": {

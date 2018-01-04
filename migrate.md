@@ -8,6 +8,9 @@ en este caso, debes tener instalado el composer en la pc
 composer create-project symfony/skeleton app
 ```
 
+#composer.json
+modificar el psr-4  "Misa\\": "src" 
+
 #instalar doctrine
 ```bash
 ./script.sh composer require doctrine maker
