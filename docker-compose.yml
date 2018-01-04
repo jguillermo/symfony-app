@@ -2,14 +2,15 @@ version: '2'
 services:
 
   php:
-      image: jguillermo/demo-app:php
+      image: jguillermo/alpine-php:nginx
       volumes:
         - ./app/:/var/www/html
+        - ./log/:/var/log/nginx/
       ports:
         - 8085:80
 
   mysql:
-    image: jguillermo/demo-app:mysql
+    image: jguillermo/docker-persist:mysql
     environment:
       MYSQL_ROOT_PASSWORD: toord
       MYSQL_USER : root
@@ -18,3 +19,8 @@ services:
       - 3369:3306
     volumes:
       - ./docker/mysql/sql:/docker-entrypoint-initdb.d
+
+  memcached:
+    image: memcached:alpine
+    ports:
+      - 11211:11211

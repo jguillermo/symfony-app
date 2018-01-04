@@ -42,3 +42,11 @@ docker/solr/data/*
 
 app/export/*
 !app/export/.gitkeep
+
+
+/log
+/log/
+/log/*
+log
+log/
+log/*
