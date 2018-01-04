@@ -12,6 +12,9 @@ start: ## Up docker containers, usage: make up
 stop: ## Stops and removes the docker containers, usage: make down
 	./script.sh stop
 
+router: ## execute symfony php bin/console
+	./script.sh console debug:router
+
 restart: ## Restart all containers, usage: make restart
 	docker-compose restart
 

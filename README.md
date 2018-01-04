@@ -56,3 +56,4 @@ java -Dc="user" -jar /opt/solr/example/exampledocs/post.jar /opt/solr/server/sol
 ```bash
 git rm -rf --cached .
 ```
+
