@@ -38,6 +38,16 @@ services:
     Misa\Users\Presentation\UserPresentation: ~
     Misa\Users\Presentation\EmployeePresentation: ~
 
+    my.graph.resolver.character:
+        class: Misa\Users\Infrastructure\Ui\UsersBundle\Resolver\CharacterResolver
+        arguments:
+            - "@overblog_graphql.type_resolver"
+        tags:
+            - { name: overblog_graphql.resolver, alias: "character_type", method: "resolveType" }
+            - { name: overblog_graphql.resolver, alias: "character_friends", method: "resolveFriends" }
+            - { name: overblog_graphql.resolver, alias: "character_hero", method: "resolveHero" }
+            - { name: overblog_graphql.resolver, alias: "character_human", method: "resolveHuman" }
+            - { name: overblog_graphql.resolver, alias: "character_droid", method: "resolveDroid" }
 
 
 

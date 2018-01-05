@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new Misa\Users\Infrastructure\Ui\UsersBundle\UsersBundle(),
+            new Overblog\GraphQLBundle\OverblogGraphQLBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
