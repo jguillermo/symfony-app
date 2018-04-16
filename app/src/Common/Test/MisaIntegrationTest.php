@@ -26,6 +26,7 @@ abstract class MisaIntegrationTest extends WebTestCase
      */
     public function request($method, $uri, $parameters = [])
     {
+        var_dump($uri.'--:--'.$method);
         $client = static::createClient();
         $client->enableProfiler();
         $crawler = $client->request($method, $uri, $parameters, [], [

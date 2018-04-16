@@ -17,11 +17,23 @@ services:
       service: memcached
 
   cli:
-    extends:
-      file: docker-compose.tasks.yml
-      service: cli
+    image: "node-test:latest"
+    volumes:
+      - ./app/tests/e2e:/app/e2e
     depends_on:
        - php
        - mysql
        - memcached
-    command: ["/tmp/wait-for-it.sh --timeout=50 mysql:3306", "--", "composer integration-test"]
+    command: "/tmp/wait-for-it.sh mysql:3306 -t 50 -- npm test"
+
+#  cli:
+#    extends:
+#      file: docker-compose.tasks.yml
+#      service: cli
+#    depends_on:
+#       - php
+#       - mysql
+#       - memcached
+#    command: ["/tmp/wait-for-it.sh --timeout=50 mysql:3306", "--", "composer integration-test"]
+
+
