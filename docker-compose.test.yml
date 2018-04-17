@@ -17,7 +17,7 @@ services:
       service: memcached
 
   cli:
-    image: "node-test:latest"
+    image: jguillermo/api-test:latest
     volumes:
       - ./app/tests/e2e:/app/e2e
     depends_on:

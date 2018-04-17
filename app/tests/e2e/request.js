@@ -7,7 +7,7 @@ function request(url = '', method = 'GET', params = []) {
         let options = getOptions(url, method, params);
         requestLib(options, (err, res, body) => {
             if (!err && (res.statusCode == 200 || res.statusCode == 201)) {
-                resolve({ body, statusCode: res.statusCode });
+                resolve({body, statusCode:res.statusCode});
             } else {
                 //console.log('***', err, '***',res.statusCode,'***',body);
                 reject(err, res, body);
